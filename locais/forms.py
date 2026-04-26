@@ -1,10 +1,11 @@
 from django import forms
-from .models import Residuo
+from .models import Residuo, Local
 
 class ResiduoForm(forms.ModelForm):
     class Meta:
         model = Residuo
         fields = ['nome']
-        widgets = {
-            'nome': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Exemplo: Papel, Vidro...'})
-        }
+class LocalForm(forms.ModelForm):
+    class Meta:
+        model = Local
+        fields = ['nome', 'cep', 'id_cidade', 'logradouro', 'numero', 'complemento', 'bairro', 'latitude', 'longitude', 'telefone', 'site', 'horario']

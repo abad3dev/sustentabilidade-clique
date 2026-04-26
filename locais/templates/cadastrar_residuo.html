@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Resíduo</title>
+</head>
+<body>
+
+<form method="post">
+    {% csrf_token %}
+
+  <fieldset>
+    <legend>Novo Tipo de Resíduo</legend>
+    
+    <table style="width: 100%; border-spacing: 10px; font-family: sans-serif;">
+      <tr>
+        <td style="width: 25%;">
+          <label for="nome_residuo">Descrição do Resíduo:</label>
+        </td>
+        <td>
+          <input type="text" id="nome_residuo" name="nome" placeholder="Ex: Monitor CRT, Bateria de Lítio" style="width: 100%;" required>
+        </td>
+      </tr>
+      
+      <tr>
+        <td></td> <td style="text-align: right; padding-top: 10px;">
+          <button type="submit" style="padding: 10px 20px; background-color: #2e7d32; color: white; border: none; border-radius: 4px; cursor: pointer;">
+            Cadastrar
+          </button>
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+</form>
+
+</body>
+
+</html>

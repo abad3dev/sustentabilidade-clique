@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Resíduo</title>
+</head>
+<body>
+
+    <nav>
+        <a href="/">Início</a>
+        <a href="/admin/">Painel Django (Adm)</a>
+    </nav>
+
+    <header>
+        <h1>Sustentabilidade em um clique</h1>
+        <p>Encontre o local de descarte correto para o seu resíduo</p>
+    </header>
+
+    <div class="container">
+        <section>
+            <div>
+                <h2>O que você deseja descartar hoje?</h2>
+                <form action="{% url 'lista_locais_tipo' %}" method="get">
+                    <input type="text" name="q" placeholder="Ex: Bateria, Papel, Óleo..." style="padding: 10px; width: 60%; border-radius: 4px; border: 1px solid #ccc;">
+                    <button type="submit" class="btn">Buscar locais</button>
+                </form>
+            </div>
+        </section>
+
+        <section>
+            <div class="search-box">
+                <h2>Buscar locais próximos de você</h2>
+                <form action="{% url 'lista_locais_cep' %}" method="get">
+                    <input type="text" name="q" placeholder="Digite seu cep" style="padding: 10px; width: 60%; border-radius: 4px; border: 1px solid #ccc;">
+                    <button type="submit" class="btn">Buscar por cep</button>
+                </form>
+            </div>
+        </section>
+
+        <section>
+            <h3>Administrador</h3>
+            <a href="{% url 'cadastrar_residuo' %}" class="btn" style="background-color: #555;">+ Cadastrar resíduo</a>
+            <a href="{% url 'cadastrar_local' %}" class="btn" style="background-color: #555;">+ Cadastrar local</a>
+        </section>
+    </div>
+
+</body>
+</html>
