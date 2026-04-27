@@ -19,12 +19,13 @@ def cadastrar_residuo(request):
 
 def cadastrar_local(request):
     if request.method == 'POST':
-        form = ResiduoForm(request.POST)
+        form = LocalForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('cadastrar_local')
+
     else:
-        form = ResiduoForm()
+        form = LocalForm()
   
     cidades = Cidade.objects.all().order_by('nome')
     
