@@ -1,10 +1,6 @@
 from django import forms
-from .models import Residuo, Local
+from .models import Local
 
-class ResiduoForm(forms.ModelForm):
-    class Meta:
-        model = Residuo
-        fields = ['nome']
 class LocalForm(forms.ModelForm):
     class Meta:
         model = Local

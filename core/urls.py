@@ -1,5 +1,5 @@
 """
-URL configuration for umclique project.
+URL configuration for core project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/6.0/topics/http/urls/
@@ -16,10 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', TemplateView.as_view(template_name='inicial.html'), name='index'),
     path('', include('locais.urls')), 
-    
+    path('', include('residuos.urls')), 
 ]
