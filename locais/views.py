@@ -1,18 +1,19 @@
+from django.contrib import messages
 from django.shortcuts import render, redirect
 from .forms import LocalForm
 from .models import Cidade
+from django.contrib.auth.decorators import login_required
 
-def index(request):
-    return render(request, 'inicial.html')
-
-    
+@login_required    
 def cadastrar_local(request):
     if request.method == 'POST':
         form = LocalForm(request.POST)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Local cadastrado com sucesso!')
             return redirect('cadastrar_local')
-
+        else:
+            messages.error(request, 'Erro ao cadastrar. Verifique os dados e tente novamente.')
     else:
         form = LocalForm()
   

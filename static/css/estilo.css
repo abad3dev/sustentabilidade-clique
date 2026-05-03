@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the side navigation */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #92CA38;
+  overflow-x: hidden;
+}
+
+
+/* Side navigation links */
+.sidenav a {
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color on hover */
+.sidenav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the content */
+.content {
+  margin-left: 200px;
+  padding-left: 20px;
+}
+
+/* Logotipo */
+img.logo {
+    width: auto;
+    height: auto; /* Mantém a proporção da imagem sem a distorcer */
+    display: block; /* Remove espaços vazios indesejados abaixo da imagem */
+}
+
+.sidenav-section-title {
+    color: #555;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 20px 16px 8px 16px;
+    border-top: 1px solid #222;
+}
+
+button, .btn-reset {
+    background-color: #92ca38; /* O verde que você escolheu */
+    color: white;              /* Texto branco */
+    padding: 10px 20px;        /* Espaçamento interno */
+    border: none;              /* Remove a borda padrão do navegador */
+    border-radius: 5px;        /* Bordas levemente arredondadas */
+    cursor: pointer;          /* Muda o mouse para a "mãozinha" */
+    text-decoration: none;     /* Caso use em um link <a> */
+    display: inline-block;
+    transition: background-color 0.3s; /* Suaviza a mudança de cor no hover */
+}
+
+/* Efeito ao passar o mouse (Escurece um pouco para dar feedback) */
+button:hover, .btn-reset:hover {
+    background-color: #7ab329; /* Um tom de verde levemente mais escuro */
+}
+
+
+table {
+    width: 75%;
+    margin: 20px 0; /* Alinhado à esquerda com margem superior/inferior */
+    border-collapse: collapse;
+
+}
+
+/* Estilização do Fieldset */
+fieldset {
+    border: 2px solid #92ca38; /* A cor verde que você definiu */
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    width: 75%; /* Mantendo a padronização das tabelas anteriores */
+    background-color: #fff;
+}
+
+/* Estilização da Legenda (Título do Fieldset) */
+legend {
+    color: #92ca38;
+    font-weight: bold;
+    padding: 0 10px;
+    font-size: 1.1rem;
+}
+
+/* Layout do Formulário dentro da Tabela */
+fieldset table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Coluna da Esquerda (Cabeçalho/Rótulo) */
+fieldset td:first-child {
+    width: 25%;
+    padding: 10px;
+    font-weight: bold;
+    color: #333;
+    vertical-align: middle;
+}
+
+/* Coluna da Direita (Inputs) */
+fieldset td:last-child {
+    width: 75%;
+    padding: 10px;
+}
+
+/* Estilização básica dos Inputs para não ficarem "crus" */
+fieldset input[type="text"], input[type="password"],input[type="email"],input[type="number"],input[type="url"],
+input[type="tel"],
+fieldset select, 
+fieldset textarea {
+    width: 40%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura */
+}
+
+/* Foco no input */
+fieldset input:focus {
+    outline: none;
+    border-color: #92ca38;
+    box-shadow: 0 0 5px rgba(146, 202, 56, 0.3);
+}
+
+/* Estilo para a mensagem de sucesso */
+.alert-success {
+    background-color: #d4edda; /* Verde bem clarinho de fundo */
+    color: #155724;           /* Texto verde escuro para contraste */
+    border: 1px solid #92ca38; /* Borda no seu tom de verde */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    width: 75%;               /* Mesma largura que definimos para tabelas e fieldset */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.alert-success i {
+    color: #92ca38;           /* Ícone no seu verde padrão */
+    font-size: 1.2rem;
+}
+
