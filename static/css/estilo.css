@@ -7,7 +7,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Style the side navigation */
+
 .sidenav {
   height: 100%;
   width: 200px;
@@ -20,7 +20,7 @@ body {
 }
 
 
-/* Side navigation links */
+
 .sidenav a {
   color: white;
   padding: 16px;
@@ -28,7 +28,7 @@ body {
   display: block;
 }
 
-/* Change color on hover */
+
 .sidenav a:hover {
   background-color: #ddd;
   color: black;
@@ -40,13 +40,13 @@ body {
   
   
   width: fit-content;
-  display: inline-block; /* O contêiner terá a largura exata do que estiver dentro */
+  display: inline-block; 
   text-align: left;
 }
 .content-tabela {
     display: flex;
     width: 100%;
-    justify-content: center; /* Centraliza horizontalmente */
+    justify-content: center; 
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -54,8 +54,8 @@ body {
 /* Logotipo */
 img.logo {
     max-width: 100%;
-    height: auto; /* Mantém a proporção da imagem sem a distorcer */
-    display: block; /* Remove espaços vazios indesejados abaixo da imagem */
+    height: auto; 
+    display: block; 
 }
 
 .sidenav-section-title {
@@ -68,20 +68,20 @@ img.logo {
 }
 
 button, .btn-reset {
-    background-color: #92ca38; /* O verde que você escolheu */
-    color: white;              /* Texto branco */
-    padding: 10px 20px;        /* Espaçamento interno */
-    border: none;              /* Remove a borda padrão do navegador */
-    border-radius: 5px;        /* Bordas levemente arredondadas */
-    cursor: pointer;          /* Muda o mouse para a "mãozinha" */
-    text-decoration: none;     /* Caso use em um link <a> */
+    background-color: #92ca38; 
+    color: white;              
+    padding: 10px 20px;        
+    border: none;             
+    border-radius: 5px;        
+    cursor: pointer;         
+    text-decoration: none;     
     display: inline-block;
-    transition: background-color 0.3s; /* Suaviza a mudança de cor no hover */
+    transition: background-color 0.3s; 
 }
 
-/* Efeito ao passar o mouse (Escurece um pouco para dar feedback) */
+
 button:hover, .btn-reset:hover {
-    background-color: #7ab329; /* Um tom de verde levemente mais escuro */
+    background-color: #7ab329; 
 }
 
 
@@ -93,17 +93,17 @@ table {
   margin-right: auto;
 }
 
-/* Estilização do Fieldset */
+
 fieldset {
-    border: 2px solid #92ca38; /* A cor verde que você definiu */
+    border: 2px solid #92ca38; 
     border-radius: 8px;
     padding: 20px;
     margin: 20px 0;
-    width: 100%; /* Mantendo a padronização das tabelas anteriores */
+    width: 100%; 
     background-color: #fff;
 }
 
-/* Estilização da Legenda (Título do Fieldset) */
+
 legend {
     color: #92ca38;
     font-weight: bold;
@@ -114,13 +114,13 @@ form {
     width: 100%;
 }
 
-/* Layout do Formulário dentro da Tabela */
+
 fieldset table {
     width: 100%;
     border-collapse: collapse;
 }
 
-/* Coluna da Esquerda (Cabeçalho/Rótulo) */
+
 fieldset td:first-child {
     
     padding: 10px;
@@ -129,13 +129,13 @@ fieldset td:first-child {
     vertical-align: middle;
 }
 
-/* Coluna da Direita (Inputs) */
+
 fieldset td:last-child {
     
     padding: 10px;
 }
 
-/* Estilização básica dos Inputs para não ficarem "crus" */
+
 fieldset input[type="text"], input[type="password"],input[type="email"],input[type="number"],input[type="url"],
 input[type="tel"],
 fieldset select, 
@@ -144,7 +144,7 @@ fieldset textarea {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; /* Garante que o padding não aumente a largura */
+    box-sizing: border-box; 
 }
 
 /* Foco no input */
@@ -156,13 +156,13 @@ fieldset input:focus {
 
 /* Estilo para a mensagem de sucesso */
 .alert-success {
-    background-color: #d4edda; /* Verde bem clarinho de fundo */
-    color: #155724;           /* Texto verde escuro para contraste */
-    border: 1px solid #92ca38; /* Borda no seu tom de verde */
+    background-color: #d4edda; 
+    color: #155724;           
+    border: 1px solid #92ca38; 
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 5px;
-    width: 100%;               /* Mesma largura que definimos para tabelas e fieldset */
+    width: 100%;               
     display: flex;
     align-items: center;
     gap: 10px;
@@ -170,7 +170,21 @@ fieldset input:focus {
 }
 
 .alert-success i {
-    color: #92ca38;           /* Ícone no seu verde padrão */
+    color: #92ca38;           
     font-size: 1.2rem;
 }
 
+table.tabela-consulta {
+    border: 2px solid #92ca38; 
+    padding: 20px;
+    margin: 20px 0;
+    width: 100%; 
+    
+}
+
+table.tabela-consulta th, 
+.tabela-consulta td {
+    border: 2px solid #92ca38; 
+    padding: 12px;
+    text-align: left;
+}

@@ -14,8 +14,8 @@
     <a href="/"><i class="fa-solid fa-house"></i> Início</a>
 <div class="sidenav-section-title">Consultas</div>
     
-    <a href="#"><i class="fa-solid fa-location-dot"></i> Consulta locais</a>
-    <a href="#"><i class="fa-solid fa-recycle"></i> Tipos de resíduos</a>
+    <a href="{% url 'consultar_locais' %}"><i class="fa-solid fa-location-dot"></i> Consultar locais</a>
+    <a href="{% url 'consultar_residuo' %}"><i class="fa-solid fa-recycle"></i> Tipos de resíduos</a>
     <div class="sidenav-section-title">Administração</div>
     <a href="{% url 'cadastrar_residuo' %}"><i class="fa-solid fa-pen-to-square"></i> Cadastrar resíduo</a>
     <a href="{% url 'cadastrar_local' %}"><i class="fa-solid fa-pen-to-square"></i> Cadastrar local</a>

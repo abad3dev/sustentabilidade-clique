@@ -4,6 +4,7 @@ from locais.models import Local
 class Residuo(models.Model):
     id_residuo = models.AutoField(primary_key=True)
     nome = models.TextField()
+    info = models.TextField()
     def __str__(self):
         return self.nome
 

@@ -3,7 +3,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Cadastrar Resíduo</title>
+    <title>Consultar locais</title>
     <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   </head>
@@ -41,54 +41,53 @@
 
 <div class="content-tabela">
 
-    {% if messages %}
-      {% for message in messages %} 
-       <br>
-        <div class="alert-success">
-            <i class="fa-solid fa-circle-check"></i> {{ message }}
-        </div>
-      {% endfor %}
-    {% endif %}
 
-<form method="post">
-    {% csrf_token %}
-   
-  <fieldset>
-    <legend>Novo Tipo de Resíduo</legend>
+
     
-    <table>
-      <tr>
-        <td>
-          <label for="nome_residuo">Descrição</label>
-        </td>
-        <td>
-          <input type="text" id="nome_residuo" name="nome" placeholder="Ex: Monitor CRT, Bateria de Lítio" required>
-        </td>
-      </tr>
-            <tr>
-        <td>
-          <label for="info_residuo">Informações</label>
-        </td>
-        <td>
-          
-        
-        <textarea name="info" id="info_residuo">
+    <table class="tabela-consulta">
 
-        </textarea>
-        
-        </td>
-      </tr>
-      
+
+       
+  <tr>
+    <th>Nome</th>
+    <th>Logradouro</th>
+    <th>Número</th>
+    <th>Complemento</th>
+    <th>Cep</th>
+    <th>Bairro</th>
+
+  </tr>
+
+
+    {% for local in locais %}
+         
       <tr>
-        <td></td> <td>
-          <button type="submit">
-            Cadastrar
-          </button>
+        <td>
+          {{ local.nome }}
         </td>
+                <td>
+          {{ local.logradouro }}
+        </td>
+                <td>
+          {{ local.numero }}
+          
+        </td>
+                <td>
+          {{ local.complemento }}
+        </td>
+                <td>
+          {{ local.cep }}
+        </td>
+                <td>
+          {{ local.bairro }}
+        </td>
+
+        
       </tr>
+     
+   {% endfor %}
     </table>
-  </fieldset>
-</form>
+
 </div>
 </div>
 </body>

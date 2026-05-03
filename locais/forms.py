@@ -4,4 +4,4 @@ from .models import Local
 class LocalForm(forms.ModelForm):
     class Meta:
         model = Local
-        fields = ['nome', 'cep', 'id_cidade', 'logradouro', 'numero', 'complemento', 'bairro', 'latitude', 'longitude', 'telefone', 'site', 'horario']
+        fields = ['nome', 'cep', 'id_cidade', 'logradouro', 'numero', 'complemento', 'bairro', 'telefone', 'site', 'horario']

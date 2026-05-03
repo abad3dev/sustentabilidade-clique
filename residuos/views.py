@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import ResiduoForm
+from .models import Residuo
 
 @login_required 
 def cadastrar_residuo(request):
@@ -20,3 +21,9 @@ def cadastrar_residuo(request):
     
     return render(request, 'cadastrar_residuo.html')
 
+def consultar_residuo(request):
+    
+    residuos = Residuo.objects.all().order_by('nome')
+    
+    return render(request, 'consultar_residuo.html', {'residuos': residuos})
+        

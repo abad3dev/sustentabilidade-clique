@@ -1,7 +1,7 @@
 from django.contrib import messages
 from django.shortcuts import render, redirect
 from .forms import LocalForm
-from .models import Cidade
+from .models import Cidade, Local
 from django.contrib.auth.decorators import login_required
 
 @login_required    
@@ -31,3 +31,9 @@ def lista_locais_bairro(request):
     return render(request, 'lista_locais_bairro.html', {
         
     })
+
+def consultar_locais(request):
+    
+    locais = Local.objects.all().order_by('nome')
+    
+    return render(request, 'consultar_locais.html', {'locais': locais})

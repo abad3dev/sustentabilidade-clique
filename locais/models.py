@@ -18,8 +18,6 @@ class Cidade(models.Model):
 class Local(models.Model):
     id_local = models.AutoField(primary_key=True)
     nome = models.TextField()
-    latitude = models.FloatField()
-    longitude = models.FloatField()
     cep = models.TextField()
     logradouro = models.TextField()
     numero = models.IntegerField()

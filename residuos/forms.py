@@ -4,4 +4,4 @@ from .models import Residuo
 class ResiduoForm(forms.ModelForm):
     class Meta:
         model = Residuo
-        fields = ['nome']
+        fields = ['nome','info']
