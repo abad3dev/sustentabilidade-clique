@@ -38,17 +38,10 @@ body {
 .content {
   margin-left: 200px; 
   
-  
+  /* padding-left: 20px; */
   width: fit-content;
   display: inline-block; /* O contêiner terá a largura exata do que estiver dentro */
   text-align: left;
-}
-.content-tabela {
-    display: flex;
-    width: 100%;
-    justify-content: center; /* Centraliza horizontalmente */
-    padding-left: 10px;
-    padding-right: 10px;
 }
 
 /* Logotipo */
@@ -99,7 +92,7 @@ fieldset {
     border-radius: 8px;
     padding: 20px;
     margin: 20px 0;
-    width: 100%; /* Mantendo a padronização das tabelas anteriores */
+    width: 75%; /* Mantendo a padronização das tabelas anteriores */
     background-color: #fff;
 }
 
@@ -110,9 +103,6 @@ legend {
     padding: 0 10px;
     font-size: 1.1rem;
 }
-form {
-    width: 100%;
-}
 
 /* Layout do Formulário dentro da Tabela */
 fieldset table {
@@ -122,7 +112,7 @@ fieldset table {
 
 /* Coluna da Esquerda (Cabeçalho/Rótulo) */
 fieldset td:first-child {
-    
+    width: 25%;
     padding: 10px;
     font-weight: bold;
     color: #333;
@@ -131,7 +121,7 @@ fieldset td:first-child {
 
 /* Coluna da Direita (Inputs) */
 fieldset td:last-child {
-    
+    width: 75%;
     padding: 10px;
 }
 
@@ -140,7 +130,7 @@ fieldset input[type="text"], input[type="password"],input[type="email"],input[ty
 input[type="tel"],
 fieldset select, 
 fieldset textarea {
-    width: 50%;
+    width: 40%;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -162,7 +152,7 @@ fieldset input:focus {
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 5px;
-    width: 100%;               /* Mesma largura que definimos para tabelas e fieldset */
+    width: 75%;               /* Mesma largura que definimos para tabelas e fieldset */
     display: flex;
     align-items: center;
     gap: 10px;

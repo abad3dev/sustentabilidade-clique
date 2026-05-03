@@ -41,27 +41,41 @@
         <img src="{% static 'img/logotipo.png' %}" class="logo">
     </header>
 
+<div class="content-tabela">
     
-        <section>
-            <div>
-                <h2>O que você deseja descartar hoje?</h2>
+                <fieldset>
+                <legend>Bem-vindos</legend>
+
+    <table>
+        <tr>
+            <td><h2>O que você deseja descartar hoje?</h2></td>
+        </tr>
+ <tr>
+            <td>
+        <form action="{% url 'lista_locais_tipo' %}" method="get">
+                    <input type="text" name="q" placeholder="Ex: Bateria, Papel, Óleo..." style="padding: 10px; width: 60%; border-radius: 4px; border: 1px solid #ccc;">
+                    <button type="submit">Buscar</button>
+                </form>
+                </td></tr>
+
+                        <tr>
+            <td><h2>Buscar locais próximos de você</h2></td>
+        </tr>
+ <tr>
+            <td>
                 <form action="{% url 'lista_locais_tipo' %}" method="get">
                     <input type="text" name="q" placeholder="Ex: Bateria, Papel, Óleo..." style="padding: 10px; width: 60%; border-radius: 4px; border: 1px solid #ccc;">
                     <button type="submit">Buscar</button>
                 </form>
-            </div>
-        </section>
+                </td></tr>
 
-        <section>
-            <div class="search-box">
-                <h2>Buscar locais próximos de você</h2>
-                <form action="{% url 'lista_locais_bairro' %}" method="get">
-                    <input type="text" name="q" placeholder="Digite seu bairro" style="padding: 10px; width: 60%; border-radius: 4px; border: 1px solid #ccc;">
-                    <button type="submit">Buscar</button>
-                </form>
-            </div>
-        </section>
 
+        
+
+
+    </table>
+
+    </fieldset>
 
     </div>
 </div>
