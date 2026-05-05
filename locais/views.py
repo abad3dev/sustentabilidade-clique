@@ -27,10 +27,24 @@ def lista_locais_tipo(request):
         
     })
 
-def lista_locais_bairro(request):
-    return render(request, 'lista_locais_bairro.html', {
+def consultar_locais_bairro(request):
+   
+    locais_bairro = []
+
+    if request.method == 'POST':
         
-    })
+        termo = request.POST.get('bairro', '').strip()
+        
+        if termo:
+            
+            locais_bairro = Local.objects.filter(bairro__icontains=termo).order_by('nome')
+        else:
+            
+            locais_bairro = Local.objects.all().order_by('nome')
+
+    return render(request, 'consultar_locais_bairro.html', {'locais_bairro': locais_bairro})
+     
+    
 
 def consultar_locais(request):
     

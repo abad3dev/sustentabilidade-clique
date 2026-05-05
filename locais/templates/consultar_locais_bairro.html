@@ -3,10 +3,10 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Sustentabilidade em um clique</title>
+    <title>Consultar locais</title>
     <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </head>
 <body>
 
 <div class="sidenav">
@@ -35,51 +35,60 @@
 
 <div class="content">
 
-
-
-    <header>
+      <header>
         <img src="{% static 'img/logotipo.png' %}" class="logo">
     </header>
 
 <div class="content-tabela">
+
+
+
     
-                <fieldset>
-                <legend>Bem-vindos</legend>
+    <table class="tabela-consulta">
 
-    <table>
-        <tr>
-            <td><h2>O que você deseja descartar hoje?</h2></td>
-        </tr>
- <tr>
-            <td>
-        <form action="{% url 'lista_locais_tipo' %}" method="post">
-            {% csrf_token %}
-                    <input type="text" name="q" placeholder="Ex: Bateria, Papel, Óleo...">
-                    <button type="submit">Buscar</button>
-                </form>
-                </td></tr>
 
-                        <tr>
-            <td><h2>Buscar locais próximos de você</h2></td>
-        </tr>
- <tr>
-            <td>
-                <form action="{% url 'consultar_locais_bairro' %}" method="post">
-                    {% csrf_token %}
-                    <input type="text" name="bairro" placeholder="Digite o bairro desejado" value="{{ request.POST.bairro }}">
-                    <button type="submit">Buscar</button>
-                </form>
-                </td></tr>
+       
+  <tr>
+    <th>Nome</th>
+    <th>Logradouro</th>
+    <th>Número</th>
+    <th>Complemento</th>
+    <th>Cep</th>
+    <th>Bairro</th>
 
+  </tr>
+
+      {% for local in locais_bairro %}
+         
+      <tr>
+        <td>
+          {{ local.nome }}
+        </td>
+                <td>
+          {{ local.logradouro }}
+        </td>
+                <td>
+          {{ local.numero }}
+          
+        </td>
+                <td>
+          {{ local.complemento }}
+        </td>
+                <td>
+          {{ local.cep }}
+        </td>
+                <td>
+          {{ local.bairro }}
+        </td>
 
         
-
-
+      </tr>
+     
+   {% endfor %}
     </table>
 
-    </fieldset>
-
-    </div>
+</div>
 </div>
 </body>
+
 </html>
